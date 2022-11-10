@@ -1,0 +1,94 @@
+select * from _____________;
+select column1, column2, ...... from _____________;
+select distinct columnName from __________;              //to print distinct(unique) values
+select count(distinct columnName) from ___________;      //return count of unique values
+select _______ from __________ where condition;          //where --> filter data
+		
+	The WHERE clause is not only used in SELECT statements, it is also used in 			UPDATE, DELETE, etc.!
+	SELECT * FROM Customers	WHERE Country = 'Mexico';
+	SELECT * FROM Customers WHERE CustomerID = 1;
+	SELECT * FROM Customers WHERE City IN ('Paris','London');
+
+SELECT * FROM Customers ORDER BY Country, CustomerName;   //order by --> sorting
+----------------(ASC, DESC)---------------------------------------------------------
+SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
+
+INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+
+------------------> is null, is not null  ---> to check for null values
+
+UPDATE Customers SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' WHERE CustomerID = 1;
+
+!!!!! Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
+
+DELETE FROM table_name WHERE condition;
+
+!!!!! The WHERE clause specifies which record(s) should be deleted. If you omit the WHERE clause, all records in the table will be deleted!
+
+SELECT MIN(column_name) FROM table_name WHERE condition;
+
+SELECT MAX(column_name) FROM table_name WHERE condition;
+
+SELECT COUNT(column_name) FROM table_name WHERE condition;
+
+SELECT AVG(column_name) FROM table_name WHERE condition;
+
+SELECT SUM(column_name) FROM table_name WHERE condition;
+
+---------------------------------------------------------------------------------
+SELECT column1, column2, ... FROM table_name WHERE columnn LIKE pattern;
+
+WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
+WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
+WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+---------------------------------------------------------------------------------
+
+
+SELECT column_name AS alias_name FROM table_name;
+
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+
+
+The INNER JOIN keyword selects records that have matching values in both tables.
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+The CROSS JOIN keyword returns all records from both tables (table1 and table2).
+
+SELECT column_name(s)
+FROM table1
+CROSS JOIN table2;
+
