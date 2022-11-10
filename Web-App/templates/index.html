@@ -75,7 +75,7 @@ i {
     position: relative;
 }
 #navbarSupportedContent>ul>li.active>a{
-	color: #1f1f20;
+	color: #ffffff;
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -96,25 +96,20 @@ i {
 	transform: rotate(90deg);
 }
 .hori-selector{
-	display:inline-block;
-	position:absolute;
-	height: 100%;
-	top: 0px;
-	left: 0px;
+	position: absolute;
+	height: 1px;
+	width: 10px;
 	transition-duration:0.6s;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	background-color: rgb(255, 255, 255);
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	margin-top: 10px;
+	margin-top: 50px;
 }
 .hori-selector .right,
 .hori-selector .left{
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 10px;
+	height: 1px;
 	background-color: rgb(255, 255, 255);
-	bottom: 10px;
+	
 }
 .hori-selector .right{
 	right: -25px;
@@ -123,18 +118,7 @@ i {
 	left: -25px;
 }
 .hori-selector .right:before,
-.hori-selector .left:before{
-	content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-}
-.hori-selector .right:before{
-	bottom: 0;
-    right: -25px;
-}
+
 .hori-selector .left:before{
 	bottom: 0;
     left: -25px;
@@ -178,8 +162,9 @@ i {
 	float: right;
 }
 body {
-	background:url('https://wallpaperaccess.com/full/2159510.jpg');
-	background-repeat:none;
+	background:url('https://c4.wallpaperflare.com/wallpaper/170/757/221/simple-background-wallpaper-preview.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>
 <script>
@@ -226,7 +211,7 @@ $(".navbar-toggler").click(function(){
 	</head>
 	<body style="color: white;">
 			<nav class="navbar navbar-expand-lg bg-transparent">
-        <a class="navbar-brand navbar-logo">TRANSFER</a>
+        <a class="navbar-brand navbar-logo">Secure File Transfer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
         </button>
@@ -249,13 +234,13 @@ $(".navbar-toggler").click(function(){
         </div>
 	</nav>
 	<div id='title'>
-		<div style="color:black">
-		  SECURE TEXT TRANSFER 
+		<div style="color: white">
+		  SECURE FILE TRANSFER 
 		</div>
 		<br>
 		<p><b>.............<b></p>
 		<h3>Is there any cloud network where we can share the files securely?</h3>
-		<h3>Yes! TRANSFER is one of the secure cloud networks where you can upload, download and decrypt your encrypted files.</h3>
+		<h3>Yes! Secure File Transfer is one of the secure cloud networks where you can upload, download and decrypt your encrypted files.</h3>
 	</div>
 
 	</body>
